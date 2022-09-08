@@ -5,7 +5,7 @@
  *Description: This function prints "Programming is like building a multilingual puzzle"
  * 
  *All C programs always return 0
- * /
+ * */
 int main(void)
 {
 	puts("\"Programming is like building a multilingual puzzle");
