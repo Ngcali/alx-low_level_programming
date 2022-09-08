@@ -1,10 +1,10 @@
 #include <stdio.h>
 /**
- * main function should probably be void - Entry point
+ * main function (Should probably be void): Entry point
  *
  * Description: prints "Programming is like building a multilingual puzzle"
  *
- * All C programs always return 0
+ * Return: All C programs always return 0
  */
 int main(void)
 {
