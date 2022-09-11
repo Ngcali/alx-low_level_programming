@@ -12,7 +12,7 @@ int main(void)
 {
 	int my_number = 48;
 	int my_a = 97;
-	
+
 	while (my_number < 58)
 	{
 		putchar(my_number);
