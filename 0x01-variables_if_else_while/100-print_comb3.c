@@ -30,4 +30,6 @@ int main(void)
 		}
 		my_number_one++;
 	}
+	putchar(10);
+	return (0);
 }
