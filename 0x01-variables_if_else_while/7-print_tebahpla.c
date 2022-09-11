@@ -12,7 +12,7 @@ int main(void)
 {
 	int my_z = 122;
 
-	while (my_z > 96)
+	while (my_z > 95)
 	{
 		putchar(my_z);
 		my_z--;
