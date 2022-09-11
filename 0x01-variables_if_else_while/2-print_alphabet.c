@@ -10,7 +10,8 @@
 int main(void)
 {
 	int my_a = 97;
-	while(my_a < 122)
+
+	while (my_a < 123)
 	{
 		putchar(my_a);
 		my_a++;
