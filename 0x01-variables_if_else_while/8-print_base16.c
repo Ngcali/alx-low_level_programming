@@ -10,8 +10,8 @@
  */
 int main(void)
 {
-	my_number = 48;
-	my_a = 97;
+	int my_number = 48;
+	int my_a = 97;
 	
 	while (my_number < 58)
 	{
