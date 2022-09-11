@@ -15,6 +15,6 @@ int main(void)
 		putchar(my_a);
 		my_a++;
 	}
-	putcar(10);
+	putchar(10);
 	return (0);
 }
