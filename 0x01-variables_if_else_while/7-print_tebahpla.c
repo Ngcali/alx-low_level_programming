@@ -15,7 +15,7 @@ int main(void)
 	while (my_z > 96)
 	{
 		putchar(my_z);
-		my_--;
+		my_z--;
 	}
 	putchar(my_z);
 	return (0);
