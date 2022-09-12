@@ -10,7 +10,10 @@
  */
 int main(void)
 {
-	int my_number_one, my_number_two = 48;
+	int my_number_one, my_number_two;
+	
+	my_number_one = 48;
+	my_number_two = 48;
 
 	while (my_number_one < 58)
 	{
