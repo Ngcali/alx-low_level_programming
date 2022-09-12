@@ -11,7 +11,7 @@
 int main(void)
 {
 	int my_number_one, my_number_two;
-	
+
 	my_number_one = 48;
 	my_number_two = 48;
 
@@ -19,7 +19,7 @@ int main(void)
 	{
 		my_number_two = my_number_one + 1;
 
-		while (my_number_two)
+		while (my_number_two < 58)
 		{
 			putchar(my_number_one);
 			putchar(my_number_two);
