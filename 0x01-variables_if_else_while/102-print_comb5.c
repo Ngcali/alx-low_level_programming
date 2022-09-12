@@ -11,7 +11,7 @@
 int main(void)
 {
 	int num_one, num_two, num_three, num_four;
-	
+
 	num_one = 48;
 
 	while (num_one < 58)
