@@ -30,7 +30,7 @@ int main(void)
 				putchar(my_number_two);
 				putchar(my_number_three);
 
-				if (my_number_one < 55 || my_number_two < 56 || my_number_one < 57)
+				if (my_number_one < 55 || my_number_two < 56 || my_number_three < 57)
 				{
 					putchar(44);
 					putchar(32);
