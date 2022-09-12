@@ -10,43 +10,43 @@
  */
 int main(void)
 {
-	int my_num_one, my_num_two, my_num_three, my_num_four;
+	int num_one, num_two, num_three, num_four;
 	
-	my_num_one = 48;
+	num_one = 48;
 
-	while (my_num_one < 58)
+	while (num_one < 58)
 	{
-		my_num_two = 48;
+		num_two = 48;
 
-		while (my_num_two < 58)
+		while (num_two < 58)
 		{
-			my_num_four = my_num_two + 1;
+			num_four = num_two + 1;
 
-			my_num_three = my_num_one;
+			num_three = num_one;
 
-			while (my_num_three < 58)
+			while (num_three < 58)
 			{
-				while (my_num_four < 58)
+				while (num_four < 58)
 				{
-					putchar(my_num_one);
-					putchar(my_num_two);
+					putchar(num_one);
+					putchar(num_two);
 					putchar(32);
-					putchar(my_num_three);
-					putchar(my_num_four);
+					putchar(num_three);
+					putchar(num_four);
 
-					if (my_num_one < 57 || my_num_two < 56 || my_num_three < 57 || my_num_four < 57)
+					if (num_one < 57 || num_two < 56 || num_three < 57 || num_four < 57)
 					{
 						putchar(44);
 						putchar(32);
 					}
-					my_num_four++;
+					num_four++;
 				}
-				my_num_four = 48;
-				my_num_three++;
+				num_four = 48;
+				num_three++;
 			}
-			my_num_two++;
+			num_two++;
 		}
-		my_num_one++;
+		num_one++;
 	}
 	putchar(10);
 	return (0);
