@@ -1,18 +1,18 @@
 #include "main.h"
 
 /**
- * main - the entry point.
+ * print_alphabet - prints the alphabet.
  *
  * Description: prints the alphabet, in
  * lowercase, followed by a new line.
  *
- * Return: C program always returns 0.
+ * Return: void.
  */
 void print_alphabet(void)
 {
 	char my_num = 'a';
 
-	while (my_num < 'z')
+	while (my_num <= 'z')
 	{
 		_putchar(my_num);
 		my_num++;
