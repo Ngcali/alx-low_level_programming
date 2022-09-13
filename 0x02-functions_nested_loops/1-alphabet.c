@@ -18,5 +18,4 @@ void print_alphabet(void)
 		my_num++;
 	}
 	_putchar('\n');
-	return (0);
 }
