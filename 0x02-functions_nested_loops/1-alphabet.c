@@ -8,7 +8,7 @@
  *
  * Return: C program always returns 0.
  */
-int main(void)
+void print_alphabet(void)
 {
 	char my_num = 'a';
 
