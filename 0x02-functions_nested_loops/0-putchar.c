@@ -12,7 +12,7 @@ int main(void)
 	char my_string[10] = "_putchar";
 	int my_number = 0;
 
-	while (my_number < 9)
+	while (my_number < 8)
 	{
 		_putchar(my_string[my_number]);
 		my_number++;
