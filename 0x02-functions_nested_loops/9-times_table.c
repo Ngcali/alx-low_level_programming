@@ -20,7 +20,7 @@ void times_table(void)
 
 			if (my_column == 0)
 			{
-				_putchar(0);
+				_putchar('0');
 			}
 			else if (my_product < 10)
 			{
