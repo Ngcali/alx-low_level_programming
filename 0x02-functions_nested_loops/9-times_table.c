@@ -14,7 +14,7 @@ void times_table(void)
 	{
 		for (my_column = 0; my_column <= 9; my_column++)
 		{
-			my_product = my_column * my_row
+			my_product = my_column * my_row;
 			my_units = my_product % 10;
 			my_tens = my_product / 10;
 
@@ -33,7 +33,7 @@ void times_table(void)
 			{
 				_putchar(',');
 				_putchar(' ');
-				-putchar(my_units + '0');
+				_putchar(my_units + '0');
 				_putchar(my_tens + '0');
 			}
 		}
