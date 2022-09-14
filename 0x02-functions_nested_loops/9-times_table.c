@@ -33,8 +33,8 @@ void times_table(void)
 			{
 				_putchar(',');
 				_putchar(' ');
-				_putchar(my_units + '0');
 				_putchar(my_tens + '0');
+				_putchar(my_units + '0');
 			}
 		}
 		_putchar('\n');
