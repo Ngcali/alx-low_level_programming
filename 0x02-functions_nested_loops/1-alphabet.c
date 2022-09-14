@@ -10,12 +10,12 @@
  */
 void print_alphabet(void)
 {
-	char my_num = 'a';
+	char my_letter = 'a';
 
-	while (my_num <= 'z')
+	while (my_letter <= 'z')
 	{
-		_putchar(my_num);
-		my_num++;
+		_putchar(my_letter);
+		my_letter++;
 	}
 	_putchar('\n');
 }
