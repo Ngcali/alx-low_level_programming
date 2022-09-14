@@ -26,5 +26,5 @@ void print_to_98(int n)
 			n--;
 		}
 	}
-	_putchar('98/n');
+	_putchar('98\n');
 }
