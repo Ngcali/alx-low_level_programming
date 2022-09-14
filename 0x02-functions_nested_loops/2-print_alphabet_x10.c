@@ -23,5 +23,6 @@ void print_alphabet_x10(void)
 			my_letter++;
 		}
 		_putchar('\n');
+		my_iteration++;
 	}
 }
