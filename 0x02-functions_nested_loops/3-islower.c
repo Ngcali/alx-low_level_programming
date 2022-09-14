@@ -3,9 +3,7 @@
 /**
  * _islower - checks for lowercase character.
  *
- * Description: checks for lowercase character.
- *
- * @c - is an ASCII character.
+ * @c: c is an ASCII character.
  *
  * Return: 1 if c is lowercase, 0 otherwise.
  */
