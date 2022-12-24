@@ -8,9 +8,8 @@
  * of both 3 and 5, prints FizzBuzz.
  */
 
-int fizz_buzz(void)
+int fizz_buzz(int i)
 {
-	int i;
 
 	for (i = 0; i <= 100; i++)
 	{
