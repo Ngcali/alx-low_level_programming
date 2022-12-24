@@ -6,6 +6,14 @@
  * multiples of 3 and Buzz for
  * multples of 5. For multiples
  * of both 3 and 5, prints FizzBuzz.
+ *
+ * Description: FizzBuzz function,
+ * that prints numbers from 1 to
+ * 100. Multiples of 3 and 5 are
+ * replaced by FizzBuzz, multiples
+ * of 3 are replaced by Fizz,
+ * multiples of 5 are replaced by
+ * Buzz.
  */
 
 int main(void)
