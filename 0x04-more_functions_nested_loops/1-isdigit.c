@@ -9,7 +9,7 @@
  * Return: 0 otherwise.
  */
 
-int is_digit(int c)
+int _isdigit(int c)
 {
     if (c <= 57 && c >=48)
     {
