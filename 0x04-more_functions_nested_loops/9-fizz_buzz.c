@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * fizz_buzz - prints Fizz for
@@ -37,6 +38,4 @@ int fizz_buzz(void)
 	}
 
 	printf("\n");
-
-	return (0);
 }
