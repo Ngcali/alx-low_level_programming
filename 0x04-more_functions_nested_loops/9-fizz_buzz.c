@@ -8,7 +8,7 @@
  * of both 3 and 5, prints FizzBuzz.
  */
 
-int fizz_buzz(int i)
+int main(void)
 {
 
 	for (i = 0; i <= 100; i++)
@@ -32,7 +32,7 @@ int fizz_buzz(int i)
 
 		if (i != 100)
 		{
-			_putchar(32);
+			printf(' ');
 		}
 	}
 
