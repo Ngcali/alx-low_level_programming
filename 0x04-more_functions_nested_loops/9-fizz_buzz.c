@@ -31,7 +31,7 @@ int fizz_buzz(void)
 			printf("%d", i);
 		}
 
-		if (x != 100)
+		if (i != 100)
 		{
 			_putchar(32);
 		}
