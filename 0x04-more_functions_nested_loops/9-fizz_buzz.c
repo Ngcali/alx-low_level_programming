@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * fizz_buzz - prints Fizz for
+ * main - prints Fizz for
  * multiples of 3 and Buzz for
  * multples of 5. For multiples
  * of both 3 and 5, prints FizzBuzz.
@@ -14,6 +14,8 @@
  * of 3 are replaced by Fizz,
  * multiples of 5 are replaced by
  * Buzz.
+ *
+ * Return: 0
  */
 
 int main(void)
