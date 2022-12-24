@@ -17,9 +17,11 @@ void print_square(int size)
 	else
 	{
 		int a = 0;
+
 		for (; a < size; a++)
 		{
 			int b = 0;
+
 			for (; b < size; b++)
 			{
 				_putchar(35);
