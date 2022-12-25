@@ -1,4 +1,5 @@
-#include "main.h"
+#include <stdio.h>
+#include "math.h"
 
 /**
  * main - finds and prints
