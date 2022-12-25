@@ -12,8 +12,8 @@
 
 int main(void)
 {
-	long a, my_max_factor, my_number;
-	my_number = 612852475143;
+	long a, my_max_factor;
+	long my_number = 612852475143;
 	double my_square_root = sqrt(my_number);
 
 	for (a = 0; a <= my_square_root; a++)
