@@ -16,7 +16,7 @@ int main(void)
 	long my_number = 612852475143;
 	double my_square_root = sqrt(my_number);
 
-	for (a = 0; a <= my_square_root; a++)
+	for (a = 1; a <= my_square_root; a++)
 	{
 		if (my_number % a == 0)
 		{
