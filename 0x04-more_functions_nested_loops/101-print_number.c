@@ -10,38 +10,20 @@
 
 void print_number(int n)
 {
-	/*if (n >= 0)
-	{
-		_putchar(n + '0');
-	}
+	unsigned int i = n;
 
 	if (n < 0)
 	{
-		_putchar('-');
-		n = -n;
-	}*/
-
-	/*if (n / 10)
-		print_number(n / 10);*/
-
-	/*_putchar(n + '0');*/
-
-	/*print_number(n + '0');*/
-
-	unsigned int k = n;
-
-	if (n < 0)
-	{
-		n *= -1;
-		k = n;
+		n = n * -1;
+		i = n;
 
 		_putchar('-');
 	}
 
-		k /= 10;
+		i /= 10;
 
-		if (k != 0)
-			print_number(k);
+		if (i != 0)
+			print_number(i);
 
 		_putchar((unsigned int) n % 10 + '0');
 }
