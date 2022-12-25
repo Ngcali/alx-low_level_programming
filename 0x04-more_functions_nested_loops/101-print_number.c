@@ -2,15 +2,16 @@
 #include <stdio.h>
 
 /**
- * main - prints an integer.
- *
+ * print_number - prints an
+ * integer.
  */
 
-int main(void)
+void print_number(int n)
 {
-	int a;
-	if (a <= 0 || a > 0)
+	if (n <= 0 || n > 0)
 	{
-		_putchar(a);
+		print_number(n / 10);
+
+		_putchar((n % 10) + 0);
 	}
 }
