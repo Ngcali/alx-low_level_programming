@@ -4,10 +4,14 @@
  * swap_int - swaps the values
  * of two integers.
  *
- * @*a: first integer to swap
+ * @*a: pointer which points to a
+ *
+ * @*b: pointer which points to b
+ *
+ * @a: first integer to swap
  * with second integer.
  *
- * @*b: second integer to swap
+ * @b: second integer to swap
  * with first integer.
  *
  * Return: void.
