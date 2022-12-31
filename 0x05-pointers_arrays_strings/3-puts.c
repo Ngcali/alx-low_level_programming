@@ -14,9 +14,15 @@
 
 void _puts(char *str)
 {
-	int my_counter;
+	int i;
+	int my_num;
 
-	for (my_counter = 0; *str != '\0'; str++)
-		_putchar(*str);
+	for (i = 0; str[i] != '\0'; ++i);
+
+	while (my_num < i)
+	{
+		_putchar(str[my_num]);
+		my_num;
+	}
 	_putchar('\n');
 }
