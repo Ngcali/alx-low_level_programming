@@ -17,7 +17,8 @@ void _puts(char *str)
 	int i;
 	int my_num = 0;
 
-	for (i = 0; str[i] != '\0'; ++i);
+	for (i = 0; str[i] != '\0'; ++i)
+	{}
 
 	while (my_num < i)
 	{
