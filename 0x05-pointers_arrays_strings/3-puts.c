@@ -8,11 +8,15 @@
  * @*str: pointer which points
  * to str.
  *
- * @str: sting in which pointer
+ * @str: string in which pointer
  * points to.
  */
 
 void _puts(char *str)
 {
-	_puts(*str);
+	int my_counter;
+
+	for (my_counter = 0; *str != '\0')
+		_putchar(*str);
+	_putchar('\n');
 }
