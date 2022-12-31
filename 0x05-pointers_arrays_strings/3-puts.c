@@ -22,7 +22,7 @@ void _puts(char *str)
 	while (my_num < i)
 	{
 		_putchar(str[my_num]);
-		my_num;
+		my_num++;
 	}
 	_putchar('\n');
 }
