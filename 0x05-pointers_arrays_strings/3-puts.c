@@ -16,7 +16,7 @@ void _puts(char *str)
 {
 	int my_counter;
 
-	for (my_counter = 0; *str != '\0')
+	for (my_counter = 0; *str != '\0'; str++)
 		_putchar(*str);
 	_putchar('\n');
 }
