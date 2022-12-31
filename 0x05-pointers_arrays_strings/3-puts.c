@@ -24,5 +24,6 @@ void _puts(char *str)
 		_putchar(str[my_num]);
 		my_num++;
 	}
+
 	_putchar('\n');
 }
