@@ -15,7 +15,7 @@
 void _puts(char *str)
 {
 	int i;
-	int my_num;
+	int my_num = 0;
 
 	for (i = 0; str[i] != '\0'; ++i);
 
