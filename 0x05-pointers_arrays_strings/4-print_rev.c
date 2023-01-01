@@ -1,6 +1,20 @@
 #include "main.h"
 #include "stdio.h"
 
+/**
+ * print_rev - prints a string,
+ * in reverse, followed by a new
+ * line.
+ *
+ * @*s: pointer which points to
+ * char s.
+ *
+ * @s: char in which pointer points
+ * to.
+ *
+ * Return: void
+ */
+
 void print_rev(char *s)
 {
 	int i;
@@ -9,7 +23,7 @@ void print_rev(char *s)
 	for (i = 0; s[i] != '\0'; ++i)
 	{}
 
-	while (my_num < i)
+	while (my_num < i+1)
 	{
 		_putchar(s[i]);
 		i--;
