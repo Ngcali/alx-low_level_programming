@@ -6,12 +6,12 @@ void print_rev(char *s)
 	int i;
 	int my_num = 0;
 
-	for (i = 0; str[i] != '\0'; ++i)
+	for (i = 0; s[i] != '\0'; ++i)
 	{}
 
 	while (my_num < i)
 	{
-		_putchar(str[i]);
+		_putchar(s[i]);
 		i--;
 	}
 
