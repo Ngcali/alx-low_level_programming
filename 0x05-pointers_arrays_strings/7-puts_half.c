@@ -1,6 +1,17 @@
 #include "main.h"
 #include "stdio.h"
 
+/**
+ * puts_char - prints half
+ * of a string, followed
+ * by a new line.
+ *
+ * @*s: pointer which points
+ * t char str.
+ *
+ * @s: string to be printed.
+ */
+
 void puts_half(char *str)
 {
 	int i;
@@ -15,9 +26,9 @@ void puts_half(char *str)
 
 	length_of_the_string = i;
 	length_of_half = i / 2;
-	my_counter = length_of_half + 1;
+	my_counter = length_of_half;
 	n = (length_of_the_string - 1) / 2;
-	my_counter_odd = n + 1;
+	my_counter_odd = n;
 	if (i % 2 == 0)
 	{
 		while (my_counter < i)
