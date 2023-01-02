@@ -26,8 +26,8 @@ void rev_string(char *s)
 	while (my_counter < i)
 	{
 		my_temp_var = s[my_counter];
-		s[my_counter] = s[i - my_counter - 1];
-		s[i - my_counter - 1] = my_temp_var;
+		/*s[my_counter] = s[i - my_counter - 1];
+		s[i - my_counter - 1] = my_temp_var;*/
 		my_counter++;
 		i--;
 	}
