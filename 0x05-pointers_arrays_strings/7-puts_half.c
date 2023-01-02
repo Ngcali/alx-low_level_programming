@@ -5,9 +5,8 @@ void puts_half(char *str)
 {
 	int i;
 	int length_of_the_string;
-	char n;
+	int n;
 	int length_of_half;
-	int my_counter;
 
 	for (i = 0; str[i] != '\0'; ++i)
 	{}
