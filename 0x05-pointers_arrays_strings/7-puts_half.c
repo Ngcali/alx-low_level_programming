@@ -4,26 +4,33 @@
 void puts_half(char *str)
 {
 	int i;
-	int my_num = 0;
 	int length_of_the_string;
 	char n;
+	int length_of_half;
+	int my_counter;
 
 	for (i = 0; str[i] != '\0'; ++i)
 	{}
 
 	length_of_the_string = i;
+	length_of_half = i / 2;
+	my_counter = length_of_half + 1;
 	n = (length_of_the_string - 1) / 2;
 	if (i % 2 == 0)
 	{
-		while (my_num < i)
+		while (length_of_half < i)
 		{
-			_putchar(str[my_num]);
-			my_num++;
+			_putchar(str[length_of_half]);
+			length_of_half++;
 		}
 	}
 	else
 	{
-		_putchar(n);
+		while (n < i)
+		{
+			_putchar(str[n]);
+			n++;
+		}
 	}
 
 	_putchar('\n');
