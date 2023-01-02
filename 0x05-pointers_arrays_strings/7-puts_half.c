@@ -5,6 +5,7 @@ void puts_half(char *str)
 {
 	int i;
 	int my_num = 0;
+	int length_of_the_string;
 
 	for (i = 0; str[i] != '\0'; ++i)
 	{}
