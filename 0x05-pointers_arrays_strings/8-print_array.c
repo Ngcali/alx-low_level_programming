@@ -14,6 +14,8 @@ void print_array(int *a, int n)
 		else if (i == n)
 		{
 			printf("%d", a[i]);
+			break;
 		}
+
 	}
 }
