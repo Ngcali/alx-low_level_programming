@@ -12,7 +12,7 @@ char *_strcpy(char *dest, char *src)
 	while (my_counter <= i)
 	{
 		src[my_counter] = dest[my_counter];
-		my_counter;
+		my_counter++;
 	}
 
 	return dest;
