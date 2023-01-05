@@ -34,7 +34,5 @@ char *_strcpy(char *dest, char *src)
 		my_counter++;
 	}
 
-	/*dest[my_counter++] = '\0';*/
-
 	return (dest);
 }
