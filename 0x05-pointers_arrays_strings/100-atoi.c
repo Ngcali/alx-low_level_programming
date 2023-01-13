@@ -14,7 +14,7 @@ int _atoi(char *s)
 			return (-1);
 		}
 
-		my_number = mynumber * 10 + s[i] - '0';
+		my_number = my_number * 10 + s[i] - '0';
 	}
 
 	return (my_number);
