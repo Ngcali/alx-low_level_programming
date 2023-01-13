@@ -9,7 +9,7 @@ int _atoi(char *s)
 	{
 		if (s[i] <= '9' && !(s[i] < '0'))
 		{
-			printf("%c", s);
+			return (s);
 		}
 		else
 		{
