@@ -9,11 +9,11 @@ int _atoi(char *s)
 
 	for (i = 0; s[i] != '\0'; ++i)
 	{
-		if (s[i] <= '9' && (s[i] >= '0' && s[i] != '\0'))
+		if (str[i]> '9' || str[i]<'0')
 		{
-			my_number = my_number * 10 + s[i] - '0';
+			return (-1);
 		}
 	}
 
-	return (my_number);
+	/*return (my_number);*/
 }
