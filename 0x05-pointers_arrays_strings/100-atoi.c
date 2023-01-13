@@ -6,7 +6,7 @@ int _atoi(char *s)
 	int i;
 	int my_number = 0;
 
-	for (int i = 0; str[i] != '\0'; ++i)
+	for (i = 0; str[i] != '\0'; ++i)
 	{
 		if (str[i]> '9' || str[i]<'0')
 		{
