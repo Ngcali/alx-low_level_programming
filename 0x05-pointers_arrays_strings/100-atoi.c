@@ -10,7 +10,7 @@ int _atoi(char *s)
 	{
 		if (s[i]> '9' || s[i]<'0')
 		{
-			return (-1);
+			return (s[i]);
 		}
 
 		my_number = my_number * 10 + s[i] - '0';
