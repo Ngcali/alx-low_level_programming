@@ -4,7 +4,7 @@
 int _atoi(char *s)
 {
 	int i = 0;
-	int my_number = 0;
+	/*int my_number = 0;*/
 	int minus_sign = 1;
 	unsigned int new_int = 0;
 
