@@ -1,6 +1,6 @@
 #include "main.h"
 
-int main(void):
+int main(void)
 {
 	int i = 0;
 	int my_ascii = 2772;
