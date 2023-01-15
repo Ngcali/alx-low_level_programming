@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
  * _atoi - converts a string to an integer.
@@ -46,5 +45,5 @@ int _atoi(char *s)
 	}
 
 	new_int *= minus_sign;
-	return new_int;
+	return (new_int);
 }
