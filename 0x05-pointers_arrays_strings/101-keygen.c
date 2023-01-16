@@ -10,14 +10,12 @@ int main(void)
 	int my_ascii = 2772;
 	char my_password[100];
 	time_t my_time;
-	int my_random;
 
 	srand((int) time(&my_time));
 	while (my_ascii > 126)
 	{
-		my_random = rand() % 126;
-		my_password[i] = my_random;
-		my_ascii -= my_random;
+		my_password[i] = rand() % 126;
+		my_ascii -= my_password[i];
 		i++;
 	}
 
