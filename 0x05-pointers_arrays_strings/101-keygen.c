@@ -28,7 +28,7 @@ int main(void)
 
 	for (k = 0; k <= i; k++)
 	{
-		printf("%c", password[k]);
+		printf("%c", my_password[k]);
 	}
 	return (0);
 }
