@@ -3,6 +3,7 @@
 int main(void)
 {
 	int i = 0;
+	int k;
 	int my_ascii = 2772;
 	char my_password[100];
 
@@ -18,10 +19,9 @@ int main(void)
 		my_password[i] = my_ascii;
 	}
 
-	int k = 0;
-	while (k <= i)
+	for (k = 0; k <= i; k++)
 	{
-		printf("%c", my_password[k]);
-		k++;
+		printf("%c", password[k]);
 	}
+	return (0);
 }
