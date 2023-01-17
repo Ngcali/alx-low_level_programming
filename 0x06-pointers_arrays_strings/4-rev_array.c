@@ -34,6 +34,6 @@ void reverse_array(int *a, int n)
 		a[my_counter_two] = *my_var;
 		*my_var = my_container;
 		my_var--;
-		my_counter_two;
+		my_counter_two++;
 	}
 }
