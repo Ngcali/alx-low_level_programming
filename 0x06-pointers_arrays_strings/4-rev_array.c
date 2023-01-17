@@ -5,7 +5,7 @@
  * array of integers.
  *
  * @*a: pointer to a.
- * 
+ *
  * @a: array of integers.
  * @n: number of elements to be reversed.
  *
