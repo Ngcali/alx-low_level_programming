@@ -14,9 +14,7 @@
 
 int _strcmp(char *s1, char *s2)
 {
-	int x = 0;
-	int y = 0;
-	int z = 0;
+	int x = 0, y = 0, z = 0;
 	int j = 0;
 	int my_lim;
 
@@ -34,7 +32,6 @@ int _strcmp(char *s1, char *s2)
 	{
 		my_lim = x;
 	}
-
 	else
 	{
 		my_lim = y;
@@ -52,9 +49,7 @@ int _strcmp(char *s1, char *s2)
 			j = s1[z] - s2[z];
 			break;
 		}
-
 		z++;
 	}
-
 	return (j);
 }
