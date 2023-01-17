@@ -28,7 +28,7 @@ void reverse_array(int *a, int n)
 		my_counter_one++;
 	}
 
-	while (my_counter_two < i / 2)
+	while (my_counter_two < my_counter_one / 2)
 	{
 		my_container = a[my_counter_two];
 		a[my_counter_two] = *my_var;
