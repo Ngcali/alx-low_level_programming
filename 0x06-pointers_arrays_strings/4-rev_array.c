@@ -15,7 +15,7 @@
 void reverse_array(int *a, int n)
 {
 	int *my_var;
-	int my_counter_one, my_container_two;
+	int my_counter_one, my_counter_two;
 	int my_container;
 
 	my_var = a;
