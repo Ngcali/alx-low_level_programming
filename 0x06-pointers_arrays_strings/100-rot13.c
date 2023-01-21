@@ -15,21 +15,21 @@ char *rot13(char *str)
 {
 	int i = 0;
 
-	if (s[i] >= 'a' && s[i] <= 'm')
+	if (str[i] >= 'a' && str[i] <= 'm')
 	{
-		s[i] += 13;
+		str[i] += 13;
 	}
-	else if (s[i] >= 'A' && s[i] <= 'M')
+	else if (str[i] >= 'A' && str[i] <= 'M')
 	{
-		s[i] += 13;
+		str[i] += 13;
 	}
-	else if (s[i] >= 'n' && s[i] <= 'z')
+	else if (str[i] >= 'n' && str[i] <= 'z')
 	{
-		s[i] -= 13;
+		str[i] -= 13;
 	}
-	else if (s[i] >= 'N' && s[i] <= 'Z')
+	else if (str[i] >= 'N' && str[i] <= 'Z')
 	{
-		s[i] -= 13;
+		str[i] -= 13;
 	}
 
 	return (str);
