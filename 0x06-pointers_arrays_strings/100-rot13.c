@@ -15,22 +15,22 @@ char *rot13(char *str)
 {
 	int i = 0;
 
-	while (str[i])
+	if (s[i] >= 'a' && s[i] <= 'm')
 	{
-		switch (str[i])
-		{
-			case 'a' - 'm':
-			/*case 'A' - 'M':*/
-				str[i] += 13;
-				break;
-			case 'n' - 'z':
-			/*case 'N' - 'Z':*/
-				str[i] -= 13;
-				break;
-			default:
-				break;
-		}
-	} i++;
+		s[i] += 13;
+	}
+	else if (s[i] >= 'A' && s[i] <= 'M')
+	{
+		s[i] += 13;
+	}
+	else if (s[i] >= 'n' && s[i] <= 'z')
+	{
+		s[i] -= 13;
+	}
+	else if (s[i] >= 'N' && s[i] <= 'Z')
+	{
+		s[i] -= 13;
+	}
 
 	return (str);
 }
