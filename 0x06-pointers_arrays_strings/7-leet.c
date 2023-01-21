@@ -20,7 +20,7 @@ char *leet(char *str)
 
 	for (i = 0; str[i]; i++)
 	{
-		for (j = 0; j < 5; j++)
+		for (j = 0; j < array_length; j++)
 		{
 			if (str[i] == array_letters[j] || str[i] - 32 == array_letters[j])
 			{
