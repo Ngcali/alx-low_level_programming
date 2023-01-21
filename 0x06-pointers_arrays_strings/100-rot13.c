@@ -19,14 +19,9 @@ char *rot13(char *str)
 	{
 		switch (str[i])
 		{
-			case 'a'...'m': case 'A'...'M':
-				str[i] += 13;
-				break;
-			case 'n'...'z': case 'N'...'Z':
-				str[i] -= 13;
-				break;
-			default:
-				break;
+			case 'a'...'m': case 'A'...'M':str[i] += 13;break;
+			case 'n'...'z': case 'N'...'Z':str[i] -= 13;break;
+			default:break;
 		}
 	} i++;
 
