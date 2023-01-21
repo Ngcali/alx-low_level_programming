@@ -15,8 +15,8 @@ char *cap_string(char *str)
 	int i;
 	int x = 0;
 	int my_const = 13;
-	char my_list[];
-	my_list[my_const] = {32, '\t', '\n', 44, ';', 46, '!', '?', '"', '(', ')', '{', '}'};
+	char my_list[] = {32, '\t', '\n', 44, ';', 46,
+	  '!', '?', '"', '(', ')', '{', '}'};
 
 	for (x = 0; str[x]; x++)
 	{
