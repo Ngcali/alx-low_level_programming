@@ -13,6 +13,8 @@
  * @dest: destination memory area where source
  * memory area will be copied to.
  * @src: source memory area to be copied.
+ * @n: number of bytes from the memory area
+ * to be copied.
  *
  * Return: a pointer to dest.
  */
