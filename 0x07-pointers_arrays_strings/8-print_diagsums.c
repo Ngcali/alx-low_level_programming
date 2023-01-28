@@ -14,7 +14,9 @@
 
 void print_diagsums(int *a, int size)
 {
-	int my_counter, sum_of_elements_in_first_diagonal, sum_of_elements_in_second_diagonal;
+	int my_counter;
+	int sum_of_elements_in_first_diagonal;
+	int sum_of_elements_in_second_diagonal;
 
 	my_counter = 0;
 	while (my_counter < size)
@@ -24,5 +26,7 @@ void print_diagsums(int *a, int size)
 		my_counter++;
 	}
 
-	printf("%d, %d\n", sum_of_elements_in_first_diagonal, sum_of_elements_in_second_diagonal);
+	printf("%d, %d\n",
+			sum_of_elements_in_first_diagonal,
+			sum_of_elements_in_second_diagonal);
 }
