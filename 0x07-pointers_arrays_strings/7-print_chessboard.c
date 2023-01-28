@@ -15,10 +15,10 @@ void print_chessboard(char (*a)[8])
 	int counter_one, counter_two;
 
 	counter_one = 0;
-	counter_two = 0;
 
 	while (counter_one < 8)
 	{
+		counter_two = 0;
 		while (counter_two < 8)
 		{
 			_putchar(a[counter_one][counter_two]);
