@@ -23,7 +23,7 @@ char *_strpbrk(char *s, char *accept)
 	{
 		for (counter_two = 0; s[counter_two] != 32; counter_two++)
 		{
-			if (accept[counter_one] == s[counter_two])
+			if (accept[counter_two] == s[counter_one])
 			{
 				s += counter_one;
 				return (s);
