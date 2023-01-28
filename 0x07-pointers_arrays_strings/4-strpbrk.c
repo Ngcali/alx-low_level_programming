@@ -21,7 +21,7 @@ char *_strpbrk(char *s, char *accept)
 
 	for (counter_one = 0; s[counter_one]; counter_one++)
 	{
-		for (counter_two = 0; accept[counter_two] != 32; counter_two++)
+		for (counter_two = 0; accept[counter_two]; counter_two++)
 		{
 			if (s[counter_one] == accept[counter_two])
 			{
