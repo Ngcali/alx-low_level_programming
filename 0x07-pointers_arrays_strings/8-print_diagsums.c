@@ -19,6 +19,8 @@ void print_diagsums(int *a, int size)
 	int sum_of_elements_in_second_diagonal;
 
 	my_counter = 0;
+	sum_of_elements_in_first_diagonal = 0;
+	sum_of_elements_in_second_diagonal = 0;
 	while (my_counter < size)
 	{
 		sum_of_elements_in_first_diagonal += a[(size + 1) * my_counter];
