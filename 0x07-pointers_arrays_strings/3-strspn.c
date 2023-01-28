@@ -16,7 +16,7 @@
 
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int counter_one, counter_two;
+	unsigned int counter_one, counter_two, my_bytes;
 
 	my_bytes = 0;
 
