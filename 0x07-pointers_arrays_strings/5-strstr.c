@@ -19,7 +19,7 @@ char *_strstr(char *haystack, char *needle)
 {
 	int counter_one, counter_two;
 
-	for (counter_one = 0; haystack[0]; counter_one++)
+	for (counter_one = 0; haystack[counter_one]; counter_one++)
 	{
 		for (counter_two = 0; needle[counter_two]; counter_two++)
 			if (haystack[counter_one + counter_two] != needle[counter_two])
