@@ -20,7 +20,7 @@ unsigned int _strspn(char *s, char *accept)
 
 	my_bytes = 0;
 
-	for (counter_one = 0; accept[0]; counter_one++)
+	for (counter_one = 0; accept[counter_one]; counter_one++)
 	{
 		for (counter_two = 0; s[counter_two] != 32; counter_two++)
 		{
