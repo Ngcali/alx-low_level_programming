@@ -5,6 +5,7 @@
  * square root of a number.
  *
  * @n: number to calculate square root.
+ * @i: number to iterate.
  *
  * Return: integer value.
  */
