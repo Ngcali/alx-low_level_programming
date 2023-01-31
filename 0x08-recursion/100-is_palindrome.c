@@ -43,10 +43,10 @@ int check_if_palindrome(char *s)
 	}
 	else
 	{
-		return (0);
+		return (1);
 	}
 
-	/*return (1);*/
+	return (1);
 }
 
 /**
