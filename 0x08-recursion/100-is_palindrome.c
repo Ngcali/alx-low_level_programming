@@ -12,6 +12,8 @@
  * Return: interger value.
  */
 
+int check_if_palindrome(char *s);
+
 int is_palindrome(char *s)
 {
 	if (*s == '0')
