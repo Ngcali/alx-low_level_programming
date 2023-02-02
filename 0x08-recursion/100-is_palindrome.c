@@ -1,14 +1,7 @@
 #include <stdio.h>
 #include <string.h>
  
-void check(char [], int);
- 
-int is_palindrome(char *s)
-{
-    check_if_palindrome(s, 0);
- 
-    return 0;
-}
+void check_if_palindrome(char [], int);
  
 int check_if_palindrome(char s[], int index)
 {
