@@ -1,5 +1,7 @@
 #include "main.h"
 
+int check_if_palindrome(char *s);
+
 /**
  * is_palindrome - returns 1 if a string
  * is a palindrome and 0 if not.
@@ -11,8 +13,6 @@
  *
  * Return: interger value.
  */
-
-int check_if_palindrome(char *s);
 
 int is_palindrome(char *s)
 {
