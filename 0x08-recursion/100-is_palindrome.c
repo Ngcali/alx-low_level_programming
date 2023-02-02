@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
  
-void check_if_palindrome(char [], int);
+int check_if_palindrome(char [], int);
  
 int check_if_palindrome(char s[], int index)
 {
