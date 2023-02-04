@@ -1,4 +1,6 @@
+#include "main.h"
 #include <string.h>
+#include <stdio.h>
 
 /**
  * is_palindrome - returns 1 if a
@@ -11,20 +13,14 @@
  * Return: interger value
  */
 
-int is_palindrome(char *s) {
-    int len = strlen(s);
+int is_palindrome(const char *s) {
     int i, j;
+    int len = strlen(s);
 
-    // Empty string is considered a palindrome
-    if (len == 0)
-        return 1;
-
-    // Check if the string is a palindrome
-    for (i = 0, j = len - 1; i < len / 2; i++, j--) {
+    for (i = 0, j = len - 1; i < j; i++, j--) {
         if (s[i] != s[j])
             return 0;
     }
 
     return 1;
 }
-
