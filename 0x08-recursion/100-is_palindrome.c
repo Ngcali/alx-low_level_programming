@@ -1,21 +1,30 @@
-#include <stdio.h>
 #include <string.h>
- 
-int check_if_palindrome(char [], int);
- 
-int check_if_palindrome(char s[], int index)
-{
-    int len = strlen(s) - (index + 1);
-    if (s[index] == s[len])
-    {
-        if (index + 1 == len || index == len)
-        {
-            return (1);
-        }
-        check_if_palindrome(s, index + 1);
+
+/**
+ * is_palindrome - returns 1 if a
+ * string is a palindrome and 0 if not.
+ *
+ * @*s: is a pointer to char s.
+ *
+ * @s: is the string to be checked.
+ *
+ * Return: interger value
+ */
+
+int is_palindrome(char *s) {
+    int len = strlen(s);
+    int i, j;
+
+    // Empty string is considered a palindrome
+    if (len == 0)
+        return 1;
+
+    // Check if the string is a palindrome
+    for (i = 0, j = len - 1; i < len / 2; i++, j--) {
+        if (s[i] != s[j])
+            return 0;
     }
-    else
-    {
-      return (0);
-    }
+
+    return 1;
 }
+
