@@ -1,11 +1,4 @@
-#include "main.h"
 #include <stdio.h>
-
-/**
- * main - prints the value of a[2].
- *
- * Return: an integer value.
- */
 
 int main(void)
 {
