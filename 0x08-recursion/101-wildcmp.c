@@ -8,10 +8,10 @@
  * can be considered identical,
  * otherwise return 0.
  *
- * @*s: pointer to char s.
+ * @*s1: pointer to char s.
  * @*s2: pointer to char s2.
  *
- * @s: string to compare with.
+ * @s1: string to compare with.
  * @s2: string to compare.
  *
  * Return: interger value
