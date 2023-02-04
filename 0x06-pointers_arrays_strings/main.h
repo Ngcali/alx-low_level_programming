@@ -7,5 +7,5 @@ char *string_toupper(char *str);
 char *cap_string(char *str);
 char *leet(char *str);
 void print_number(int n);
-/*int _putchar (int n);*/
+int _putchar (int n);
 void print_number(int n);
