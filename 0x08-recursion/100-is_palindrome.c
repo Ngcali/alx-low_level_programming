@@ -13,7 +13,7 @@
  * Return: interger value
  */
 
-int is_palindrome_helper(const char *s, int start, int end) {
+int is_palindrome_helper(char *s, int start, int end) {
     if (start >= end)
         return 1;
 
@@ -23,6 +23,6 @@ int is_palindrome_helper(const char *s, int start, int end) {
     return is_palindrome_helper(s, start + 1, end - 1);
 }
 
-int is_palindrome(const char *s) {
+int is_palindrome(char *s) {
     return is_palindrome_helper(s, 0, strlen(s) - 1);
 }
