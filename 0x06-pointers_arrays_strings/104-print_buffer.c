@@ -15,7 +15,7 @@
 
 void print_buffer(char *b, int size)
 {
-	int i;
+	int i, j;
 
 	if (size <= 0)
 	{
@@ -30,7 +30,7 @@ void print_buffer(char *b, int size)
 		printf("%02x ", b[i]);
 		if (i % 10 == 9 || i == size - 1)
 		{
-			for (int j = i - (i % 10); j <= i; j++)
+			for (j = i - (i % 10); j <= i; j++)
 				printf("%c", isprint(b[j]) ? b[j] : '.');
 			printf("\n");
 		}
