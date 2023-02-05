@@ -24,19 +24,19 @@ void print_buffer(char *b, int size)
     }
     for (i = 0; i < size; i++)
     {
-        if ((i % 10) == 0) { // start of a new line 
-            printf("%08x: ", i); // print the position in hexadecimal 
+        if ((i % 10) == 0) { 
+            printf("%08x: ", i); 
     }
 
-    printf("%02x ", b[i]); // print the content of the buffer in hexadecimal
+    printf("%02x ", b[i]);
 
     if ((b[i] >= 32 && b[i] <= 126))
-    { // check if it is a printable character 
-        printf("%c", b[i]); // print the character 
+    { 
+        printf("%c", b[i]); 
     }
     else
     {
-        printf("."); // otherwise, print .  
+        printf(".");  
     }
 
     if ((i + 1) % 10 == 0 || i == size - 1)
