@@ -1,6 +1,6 @@
 #include "main.h"
 #include <stdio.h>
-#include <ctype.h>
+#include <string.h>
 
 /**
  * print_buffer - prints a buffer.
@@ -15,24 +15,30 @@
 
 void print_buffer(char *b, int size)
 {
-	int i, j;
+    if (size <= 0)
+    {
+        printf("\n");
+        return;
+    }
+    for (int i = 0; i < size; i++)
+    {
+        if (i % 10 == 0) { // start of a new line 
+            printf("%08x: ", i); // print the position in hexadecimal 
+    }
 
-	if (size <= 0)
-	{
-		printf("\n");
-		return;
-	}
+    printf("%02x ", b[i]); // print the content of the buffer in hexadecimal
 
-	for (i = 0; i < size; i++)
-	{
-		if (i % 10 == 0)
-			printf("%08x: ", i);
-		printf("%02x ", b[i]);
-		if (i % 10 == 9 || i == size - 1)
-		{
-			for (j = i - (i % 10); j <= i; j++)
-				printf("%c", isprint(b[j]) ? b[j] : '.');
-			printf("\n");
-		}
-	}
+    if ((b[i] >= 32 && b[i] <= 126))
+    { // check if it is a printable character 
+        printf("%c", b[i]); // print the character 
+    }
+    else
+    {
+        printf("."); // otherwise, print .  
+    }
+
+    if ((i + 1) % 10 == 0 || i == size - 1)
+    {
+        printf("\n");
+    }
 }
