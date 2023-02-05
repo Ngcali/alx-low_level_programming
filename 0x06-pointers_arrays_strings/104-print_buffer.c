@@ -15,14 +15,16 @@
 
 void print_buffer(char *b, int size)
 {
+    int i;
+
     if (size <= 0)
     {
         printf("\n");
         return;
     }
-    for (int i = 0; i < size; i++)
+    for (i = 0; i < size; i++)
     {
-        if (i % 10 == 0) { // start of a new line 
+        if ((i % 10) == 0) { // start of a new line 
             printf("%08x: ", i); // print the position in hexadecimal 
     }
 
