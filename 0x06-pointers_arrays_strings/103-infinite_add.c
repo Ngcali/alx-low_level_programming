@@ -27,12 +27,13 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	int carry = 0;
 
 	if (size_r <= len + 1)
-		return 0;
+		return (0);
 
 	r[len + 1] = '\0';
 	while (len1 || len2 || carry)
 	{
 		int sum = carry;
+
 		if (len1)
 			sum += n1[--len1] - '0';
 		if (len2)
@@ -41,5 +42,5 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		carry = sum / 10;
 		r[len--] = (sum % 10) + '0';
 	}
-	return r + len + 1;
+	return (r + len + 1);
 }
