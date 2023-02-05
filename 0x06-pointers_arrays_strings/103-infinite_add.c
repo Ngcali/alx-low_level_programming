@@ -24,11 +24,11 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
   int len1 = strlen(n1);
   int len2 = strlen(n2);
   int len = (len1 > len2) ? len1 : len2;
+  int carry = 0;
 
   if (size_r <= len + 1)
     return 0;
 
-  int carry = 0;
   r[len + 1] = '\0';
   while (len1 || len2 || carry)
   {
