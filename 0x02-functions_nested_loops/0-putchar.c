@@ -19,5 +19,6 @@ int _putchar(void) {
   putchar('h');
   putchar('a');
   putchar('r');
-  return (write(1 &c,1));
+  putchar('\n');
+  return (0);
 }
