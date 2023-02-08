@@ -1,4 +1,3 @@
-#include <unistd.h>
 #include "main.h"
 
 /**
@@ -9,15 +8,16 @@
  * Return: C program always returns 0.
  */
 
-int _putchar(char c)
+int main(void)
 {
-        _putchar('_');
-        _putchar('p');
-        _putchar('u');
-        _putchar('t');
-        _putchar('c');
-        _putchar('h');
-        _putchar('a');
-        _putchar('r');
-        return (write(1, &c,1));
+	char my_string[10] = "_putchar";
+	int my_number = 0;
+
+	while (my_number < 8)
+	{
+		_putchar(my_string[my_number]);
+		my_number++;
+	}
+	_putchar('\n');
+	return (0);
 }
