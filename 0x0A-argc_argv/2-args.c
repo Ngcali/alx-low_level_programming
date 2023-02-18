@@ -4,7 +4,7 @@
  * main - prints all arguments
  * it receives.
  *
- * @args: number of arguments.
+ * @argc: number of arguments.
  *
  * @*argv: pointer to argv.
  *
@@ -22,5 +22,5 @@ int main(int argc, char *argv[])
 		printf("%s\n", argv[i]);
 	}
 
-	return 0;
+	return (0);
 }
