@@ -15,21 +15,23 @@
 
 char *create_array(unsigned int size, char c)
 {
-	/*Allocate memory for the array*/
-	char *arr = malloc(size * sizeof(char));
+	unsigned int my_counter;
 
-	if (arr == NULL || size == 0)
+	/*Allocate memory for the array*/
+	char *my_arr = malloc(size * sizeof(char));
+
+	if (my_arr == NULL || size == 0)
 	{
 		/*Return NULL if allocation fails or size is 0*/
 		return NULL;
 	}
 
-	for (unsigned int i = 0; i < size; i++)
+	for (my_counter = 0; my_counter < size; my_counter++)
 	{
 		/*Initialize the array with the given char*/
-		arr[i] = c;
+		my_arr[my_counter] = c;
 	}
 
 	/*Return a pointer to the array*/
-	return arr;
+	return my_arr;
 }
