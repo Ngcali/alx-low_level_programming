@@ -20,9 +20,9 @@
 
 int main(int argc, char *argv[])
 
-	int args = argc - 1
+	int argc = argc - 1
 {
-	if (args != 1)
+	if (argc != 1)
 	{
 		printf("Usage: %s\n", argv[0]);
 		return (1);
