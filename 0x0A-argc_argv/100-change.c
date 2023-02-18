@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 	{
 		printf("Error\n");
 
-		return 1;
+		return (1);
 	}
 
 	cents = atoi(argv[1]);
@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
 	{
 		printf("0\n");
 
-		return 0;
+		return (0);
 	}
 
 	while (cents > 0)
