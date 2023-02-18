@@ -23,7 +23,7 @@ char *create_array(unsigned int size, char c)
 	if (my_arr == NULL || size == 0)
 	{
 		/*Return NULL if allocation fails or size is 0*/
-		return NULL;
+		return (NULL);
 	}
 
 	for (my_counter = 0; my_counter < size; my_counter++)
@@ -33,5 +33,5 @@ char *create_array(unsigned int size, char c)
 	}
 
 	/*Return a pointer to the array*/
-	return my_arr;
+	return (my_arr);
 }
