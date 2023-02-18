@@ -13,15 +13,9 @@
  * Return: 0
  */
 
-/*int main(int argc) {
-    printf("%d\n", argc - 1);
-    return (0);
-}*/
 
-int main(int argc, __attribute__((unused)) char *argv[])
+int main(int argc, void *argv[])
 {
-	int args = argc - 1;
-
-	printf("%d\n", args);
+	printf("%d\n", args - 1);
 	return (0);
 }
