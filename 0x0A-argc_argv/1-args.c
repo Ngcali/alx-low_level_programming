@@ -18,10 +18,10 @@
     return 0;
 }*/
 
-int main(int argc, char *argv[])
-
-	int argc = argc - 1
+int main(int argc, char *argv)
 {
+	argc = argc -1;
+
 	if (argc != 1)
 	{
 		printf("Usage: %s\n", argv[0]);
