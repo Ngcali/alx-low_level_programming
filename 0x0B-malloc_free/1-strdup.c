@@ -15,20 +15,23 @@
  * Return: pointer to duplicate_str
  */
 
-char *_strdup(char *str) {
-    if (str == NULL) { // check for NULL input
-        return NULL;
-    }
-    int len = 0;
-    while (str[len] != '\0') { // determine length of str
-        len++;
-    }
-    char *new_str = malloc((len + 1) * sizeof(char)); // allocate memory for new string
-    if (new_str == NULL) { // check for insufficient memory
-        return NULL;
-    }
-    for (int i = 0; i <= len; i++) { // copy string
-        new_str[i] = str[i];
-    }
-    return new_str; // return pointer to new string
+char *_strdup(char *str)
+{
+  char *duplicate_str;
+  int str_len = 0;
+
+  if (str == NULL)
+    return (NULL);
+
+  while (str[str_len] != '\0')
+    str_len++;
+
+  duplicate_str = malloc((str_len + 1) * sizeof(char));
+  if (duplicate_str == NULL)
+    return (NULL);
+
+  for (int i = 0; i <= str_len; i++)
+    duplicate_str[i] = str[i];
+
+  return (duplicate_str);
 }
