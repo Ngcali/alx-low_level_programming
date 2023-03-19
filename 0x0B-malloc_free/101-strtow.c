@@ -1,101 +1,73 @@
 #include <stdlib.h>
-#include <string.h>
 
-// Returns the number of words in the given string.
-// Words are separated by spaces.
-static int count_words(const char *str) {
-    int count = 0;
-    int in_word = 0;
+/**
+ * count_words - Returns the number of words in a string
+ * @str: The string to count words in
+ *
+ * Return: The number of words in the string
+ */
+int count_words(char *str)
+{
+        int count = 0, i = 0;
 
-    while (*str != '\0') {
-        if (*str == ' ') {
-            if (in_word) {
-                in_word = 0;
-            }
-        } else {
-            if (!in_word) {
-                in_word = 1;
-                count++;
-            }
+        while (str[i])
+        {
+                while (str[i] && (str[i] == ' ' || str[i] == '\t'))
+                        i++;
+                if (str[i])
+                        count++;
+                while (str[i] && str[i] != ' ' && str[i] != '\t')
+                        i++;
         }
 
-        str++;
-    }
-
-    return count;
+        return (count);
 }
 
-// Returns a pointer to an array of strings, where each string
-// is a single word from the given string, null-terminated.
-// Words are separated by spaces.
-// Returns NULL if str == NULL or str == "".
-// Returns NULL if memory allocation fails.
-char **strtow(char *str) {
-    if (str == NULL || *str == '\0') {
-        return NULL;
-    }
+/**
+ * strtow - Splits a string into words
+ * @str: The string to split
+ *
+ * Return: An array of strings (words) or NULL if str is NULL or empty
+ */
+char **strtow(char *str)
+{
+        char **words;
+        int num_words, i, j, k, len;
 
-    int num_words = count_words(str);
+        if (str == NULL || str[0] == '\0')
+                return (NULL);
 
-    char **words = malloc(sizeof(char *) * (num_words + 1));
-    if (words == NULL) {
-        return NULL;
-    }
+        num_words = count_words(str);
+        if (num_words == 0)
+                return (NULL);
 
-    int word_index = 0;
-    int in_word = 0;
-    char *word_start = NULL;
+        words = malloc(sizeof(char *) * (num_words + 1));
+        if (words == NULL)
+                return (NULL);
 
-    while (*str != '\0') {
-        if (*str == ' ') {
-            if (in_word) {
-                in_word = 0;
-                *words = malloc(str - word_start + 1);
-                if (*words == NULL) {
-                    // Allocation failed. Clean up and return NULL.
-                    for (int i = 0; i < word_index; i++) {
-                        free(words[i]);
-                    }
-                    free(words);
-                    return NULL;
+        for (i = 0, j = 0; i < num_words; i++)
+        {
+                while (str[j] == ' ' || str[j] == '\t')
+                        j++;
+                len = 0;
+                while (str[j + len] && str[j + len] != ' ' && str[j + len] != '\t')
+                        len++;
+                words[i] = malloc(sizeof(char) * (len + 1));
+                if (words[i] == NULL)
+                {
+                        for (k = 0; k < i; k++)
+                                free(words[k]);
+                        free(words);
+                        return (NULL);
                 }
-
-                memcpy(*words, word_start, str - word_start);
-                (*words)[str - word_start] = '\0';
-                words++;
-                word_index++;
-            }
-        } else {
-            if (!in_word) {
-                in_word = 1;
-                word_start = str;
-            }
+                for (k = 0; k < len; k++)
+                        words[i][k] = str[j + k];
+                words[i][len] = '\0';
+                j += len;
         }
 
-        str++;
-    }
+        words[num_words] = NULL;
 
-    // Add the last word (if any).
-    if (in_word) {
-        *words = malloc(str - word_start + 1);
-        if (*words == NULL) {
-            // Allocation failed. Clean up and return NULL.
-            for (int i = 0; i < word_index; i++) {
-                free(words[i]);
-            }
-            free(words);
-            return NULL;
-        }
-
-        memcpy(*words, word_start, str - word_start);
-        (*words)[str - word_start] = '\0';
-        words++;
-        word_index++;
-    }
-
-    // Add the final NULL pointer.
-    *words = NULL;
-
-    return words - word_index;
+        return (words);
 }
 
