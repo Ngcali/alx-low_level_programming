@@ -1,52 +1,35 @@
-#include "main.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size) {
+    void *new_ptr;
 
-/**
- * _realloc - reallocates a memory block
- * @ptr: pointer to the memory previously allocated with malloc/calloc
- * @old_size: size, in bytes, of the allocated space for ptr
- * @new_size: new size, in bytes, of the new memory block
- *
- * Return: pointer to the new memory block, or NULL if new_size is zero
- * or if the function fails to allocate memory
- */
-char *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
-{
-    /* case where new_size is zero */
-    if (new_size == 0)
-    {
+    // If new size is zero, free the memory block and return NULL
+    if (new_size == 0) {
         free(ptr);
         return NULL;
     }
 
-    /* case where ptr is NULL */
-    if (ptr == NULL)
-    {
+    // If the pointer is NULL, just allocate new memory
+    if (ptr == NULL) {
         return malloc(new_size);
     }
 
-    /* case where new_size is equal to old_size */
-    if (new_size == old_size)
-    {
+    // If new size is the same as old size, return the original pointer
+    if (new_size == old_size) {
         return ptr;
     }
 
-    /* allocate memory for the new block */
-    char *new_ptr = malloc(new_size);
-    if (new_ptr == NULL)
-    {
+    // Allocate new memory block with the new size
+    new_ptr = malloc(new_size);
+
+    // If the allocation fails, return NULL and keep the original memory block
+    if (new_ptr == NULL) {
         return NULL;
     }
 
-    /* copy the contents of the old block to the new block */
-    unsigned int copy_size = old_size < new_size ? old_size : new_size;
-    memcpy(new_ptr, ptr, copy_size);
+    // Copy the contents from the original memory block to the new one
+    memcpy(new_ptr, ptr, (old_size < new_size ? old_size : new_size));
 
-    /* free the old block */
+    // Free the original memory block
     free(ptr);
 
-    /* return the pointer to the new block */
     return new_ptr;
 }
