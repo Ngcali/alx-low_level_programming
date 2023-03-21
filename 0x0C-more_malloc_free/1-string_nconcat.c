@@ -2,32 +2,37 @@
 #include <string.h>
 
 /**
- * string_nconcat - concatenates two strings
- * @s1: first string
- * @s2: second string
- * @n: maximum number of bytes of s2 to concatenate
- * Return: pointer to the concatenated string, or NULL on failure
+ * string_nconcat - Concatenates two strings.
+ * @s1: The first string.
+ * @s2: The second string.
+ * @n: The maximum number of bytes from @s2 to concatenate to @s1.
+ *
+ * Return: If memory allocation fails, NULL.
+ *         Otherwise, a pointer to the concatenated space in memory.
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	if (s1 == NULL)
-		s1 = "";
-	if (s2 == NULL)
-		s2 = "";
+    char *result;
+    unsigned int i, j;
+    size_t len1 = 0, len2 = 0;
 
-	size_t len1 = strlen(s1);
-	size_t len2 = strlen(s2);
+    if (s1 != NULL)
+        len1 = strlen(s1);
+    if (s2 != NULL)
+        len2 = strlen(s2);
 
-	if (n >= len2)
-		n = len2;
+    if (n >= len2)
+        n = len2;
 
-	char *result = malloc(sizeof(char) * (len1 + n + 1));
-	if (result == NULL)
-		return NULL;
+    result = malloc(sizeof(char) * (len1 + n + 1));
+    if (result == NULL)
+        return (NULL);
 
-	memcpy(result, s1, len1);
-	memcpy(result + len1, s2, n);
-	result[len1 + n] = '\0';
+    for (i = 0; i < len1; i++)
+        result[i] = s1[i];
+    for (j = 0; j < n; j++, i++)
+        result[i] = s2[j];
+    result[i] = '\0';
 
-	return result;
+    return (result);
 }
