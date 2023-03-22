@@ -10,6 +10,7 @@ int main(void)
 {
 	const char *file = __FILE__;
 	const char *filename = strrchr(file, '/');
+
 	if (filename == NULL)
 	{
 		filename = file;
@@ -21,4 +22,3 @@ int main(void)
 	printf("%s\n", filename);
 	return (0);
 }
-
