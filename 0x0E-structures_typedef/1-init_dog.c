@@ -1,3 +1,4 @@
+#include "dog.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -33,22 +34,3 @@ void init_dog(dog_t *d, char *name, float age, char *owner)
         strcpy(d->owner, owner);
     }
 }
-
-/**
- * main - entry point
- *
- * Return: 0 on success
- */
-int main(void)
-{
-    dog_t my_dog;
-
-    init_dog(&my_dog, "Fido", 3.5, "John Smith");
-
-    printf("Name: %s\n", my_dog.name);
-    printf("Age: %.1f\n", my_dog.age);
-    printf("Owner: %s\n", my_dog.owner);
-
-    return (0);
-}
-
