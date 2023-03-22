@@ -1,83 +1,63 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 
 /**
- * main - multiplies two positive numbers
- * @argc: argument count
- * @argv: argument vector
+ * is_valid_number - Checks if a string represents a valid positive number
+ * @num: The string to check
  *
- * Return: 0 on success, 98 on failure
+ * Return: 1 if the string represents a valid positive number, 0 otherwise
  */
-int main(int argc, char **argv)
+int is_valid_number(char *num)
 {
-    int len1 = 0, len2 = 0, i, j, carry, n1, n2, sum;
-    char *result;
+    while (*num)
+    {
+        if (!isdigit(*num))
+        {
+            return 0;
+        }
+        num++;
+    }
+    return 1;
+}
 
-    /* check for correct number of arguments */
-    if (argc != 3)
+/**
+ * str_to_int - Converts a string to an integer
+ * @num: The string to convert
+ *
+ * Return: The integer value of the string
+ */
+int str_to_int(char *num)
+{
+    int result = 0;
+    while (*num)
+    {
+        result = result * 10 + (*num - '0');
+        num++;
+    }
+    return result;
+}
+
+/**
+ * main - Entry point. Multiplies two positive numbers passed as arguments.
+ * @argc: The number of arguments
+ * @argv: The argument vector
+ *
+ * Return: 0 on success, 98 on error
+ */
+int main(int argc, char *argv[])
+{
+    if (argc != 3 || !is_valid_number(argv[1]) || !is_valid_number(argv[2]))
     {
         printf("Error\n");
-        return (98);
+        exit(98);
     }
 
-    /* check if arguments are valid numbers */
-    for (i = 1; i < argc; i++)
-    {
-        for (j = 0; argv[i][j]; j++)
-        {
-            if (argv[i][j] < '0' || argv[i][j] > '9')
-            {
-                printf("Error\n");
-                return (98);
-            }
-        }
-    }
+    int num1 = str_to_int(argv[1]);
+    int num2 = str_to_int(argv[2]);
+    int result = num1 * num2;
 
-    /* calculate length of first number */
-    while (argv[1][len1])
-        len1++;
-
-    /* calculate length of second number */
-    while (argv[2][len2])
-        len2++;
-
-    /* allocate memory for result */
-    result = malloc(sizeof(char) * (len1 + len2 + 1));
-    if (!result)
-        return (1);
-
-    /* initialize result to 0 */
-    for (i = 0; i < len1 + len2; i++)
-        result[i] = '0';
-
-    /* multiply each digit and add to result */
-    for (i = len1 - 1; i >= 0; i--)
-    {
-        carry = 0;
-        n1 = argv[1][i] - '0';
-
-        for (j = len2 - 1; j >= 0; j--)
-        {
-            n2 = argv[2][j] - '0';
-            sum = (n1 * n2) + (result[i + j + 1] - '0') + carry;
-            carry = sum / 10;
-            result[i + j + 1] = (sum % 10) + '0';
-        }
-
-        if (carry)
-            result[i + j + 1] = (carry % 10) + '0';
-    }
-
-    /* remove leading zeros */
-    while (*result == '0' && *(result + 1) != '\0')
-        result++;
-
-    /* print result */
-    printf("%s\n", result);
-
-    /* free memory */
-    free(result);
-
-    return (0);
+    printf("%d\n", result);
+    return 0;
 }
