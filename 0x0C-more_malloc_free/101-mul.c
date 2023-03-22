@@ -1,73 +1,83 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <ctype.h>
 
-void print_error(void)
+/**
+ * main - multiplies two positive numbers
+ * @argc: argument count
+ * @argv: argument vector
+ *
+ * Return: 0 on success, 98 on failure
+ */
+int main(int argc, char **argv)
 {
-    printf("Error\n");
-    exit(98);
-}
+    int len1 = 0, len2 = 0, i, j, carry, n1, n2, sum;
+    char *result;
 
-int parse_positive_number(const char *str, int *digits)
-{
-    int len = 0;
-    while (*str != '\0') {
-        if (!isdigit(*str)) {
-            print_error();
+    /* check for correct number of arguments */
+    if (argc != 3)
+    {
+        printf("Error\n");
+        return (98);
+    }
+
+    /* check if arguments are valid numbers */
+    for (i = 1; i < argc; i++)
+    {
+        for (j = 0; argv[i][j]; j++)
+        {
+            if (argv[i][j] < '0' || argv[i][j] > '9')
+            {
+                printf("Error\n");
+                return (98);
+            }
         }
-        digits[len] = *str - '0';
-        len++;
-        str++;
     }
-    return len;
-}
 
-void multiply(int *result, int len1, const int *digits1, int len2, const int *digits2)
-{
-    int i, j, carry;
-    for (i = 0; i < len1 + len2; i++) {
-        result[i] = 0;
-    }
-    for (i = 0; i < len1; i++) {
+    /* calculate length of first number */
+    while (argv[1][len1])
+        len1++;
+
+    /* calculate length of second number */
+    while (argv[2][len2])
+        len2++;
+
+    /* allocate memory for result */
+    result = malloc(sizeof(char) * (len1 + len2 + 1));
+    if (!result)
+        return (1);
+
+    /* initialize result to 0 */
+    for (i = 0; i < len1 + len2; i++)
+        result[i] = '0';
+
+    /* multiply each digit and add to result */
+    for (i = len1 - 1; i >= 0; i--)
+    {
         carry = 0;
-        for (j = 0; j < len2; j++) {
-            result[i+j] += digits1[len1-1-i] * digits2[len2-1-j] + carry;
-            carry = result[i+j] / 10;
-            result[i+j] %= 10;
+        n1 = argv[1][i] - '0';
+
+        for (j = len2 - 1; j >= 0; j--)
+        {
+            n2 = argv[2][j] - '0';
+            sum = (n1 * n2) + (result[i + j + 1] - '0') + carry;
+            carry = sum / 10;
+            result[i + j + 1] = (sum % 10) + '0';
         }
-        result[i+len2] += carry;
-    }
-    while (result[len1+len2-1] == 0 && len1+len2 > 1) {
-        len2--;
-    }
-}
 
-void print_number(int len, const int *digits)
-{
-    int i;
-    for (i = len-1; i >= 0; i--) {
-        printf("%d", digits[i]);
-    }
-    printf("\n");
-}
-
-int main(int argc, char *argv[])
-{
-    int digits1[10000], digits2[10000], result[20000];
-    int len1, len2;
-    int i;
-
-    if (argc != 3) {
-        print_error();
+        if (carry)
+            result[i + j + 1] = (carry % 10) + '0';
     }
 
-    len1 = parse_positive_number(argv[1], digits1);
-    len2 = parse_positive_number(argv[2], digits2);
+    /* remove leading zeros */
+    while (*result == '0' && *(result + 1) != '\0')
+        result++;
 
-    multiply(result, len1, digits1, len2, digits2);
+    /* print result */
+    printf("%s\n", result);
 
-    print_number(len1+len2, result);
+    /* free memory */
+    free(result);
 
-    return 0;
+    return (0);
 }
