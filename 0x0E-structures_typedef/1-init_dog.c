@@ -1,6 +1,3 @@
-#ifndef DOG_H
-#define DOG_H
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -27,7 +24,31 @@ typedef struct dog
  *
  * Return: void
  */
-void init_dog(dog_t *d, char *name, float age, char *owner);
+void init_dog(dog_t *d, char *name, float age, char *owner)
+{
+    if (d != NULL && name != NULL && owner != NULL)
+    {
+        strcpy(d->name, name);
+        d->age = age;
+        strcpy(d->owner, owner);
+    }
+}
 
-#endif /* DOG_H */
+/**
+ * main - entry point
+ *
+ * Return: 0 on success
+ */
+int main(void)
+{
+    dog_t my_dog;
+
+    init_dog(&my_dog, "Fido", 3.5, "John Smith");
+
+    printf("Name: %s\n", my_dog.name);
+    printf("Age: %.1f\n", my_dog.age);
+    printf("Owner: %s\n", my_dog.owner);
+
+    return (0);
+}
 
