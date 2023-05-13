@@ -23,7 +23,7 @@ void print_all(const char * const format, ...)
 	while (format && format[i])
 	{
 		j = 1;
-		
+
 		switch (format[i])
 		{
 			case 'c':
