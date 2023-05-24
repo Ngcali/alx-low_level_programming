@@ -1,5 +1,5 @@
 #include "lists.h"
-#include <stddef.h> 
+#include <stddef.h>
 /* Add this line to include the size_t type and NULL macro */
 
 /**
@@ -19,5 +19,5 @@ size_t listint_len(const listint_t *h)
 		h = h->next;
 	}
 
-	return count;
+	return (count);
 }
