@@ -1,20 +1,21 @@
 section .data
-    format db 'Hello, Holberton', 0
+    hello db "Hello, Holberton", 0
+    len equ $-hello
 
 section .text
-    extern printf
-
     global _start
 
 _start:
-    ; Prepare arguments for printf function call
-    mov rdi, format
-    xor rax, rax
+    ; Prepare arguments for printf
+    mov eax, 4
+    mov ebx, 1
+    mov ecx, hello
+    mov edx, len
 
     ; Call printf
-    call printf
+    int 0x80
 
-    ; Exit the program
-    mov eax, 60  ; Syscall number for exit
-    xor edi, edi ; Exit status (0)
-    syscall
+    ; Call exit
+    mov eax, 1
+    xor ebx, ebx
+    int 0x80
