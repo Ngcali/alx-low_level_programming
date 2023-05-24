@@ -1,21 +1,24 @@
 section .data
-    hello db "Hello, Holberton", 0
-    len equ $-hello
+    hello db 'Hello, Holberton', 0
+    format db 'Hello, Holberton', 10, 0
 
 section .text
-    global _start
+    global main
+    extern printf
 
-_start:
-    ; Prepare arguments for printf
-    mov eax, 4
-    mov ebx, 1
-    mov ecx, hello
-    mov edx, len
+main:
+    push rbp
+    mov rbp, rsp
 
-    ; Call printf
-    int 0x80
+    sub rsp, 8        ; Allocate space for local variables
 
-    ; Call exit
-    mov eax, 1
-    xor ebx, ebx
-    int 0x80
+    mov rdi, format   ; Load the format string into rdi
+    xor eax, eax      ; Clear eax register
+
+    call printf       ; Call the printf function
+
+    add rsp, 8        ; Deallocate space for local variables
+
+    mov eax, 0        ; Return 0 from main
+    leave
+    ret
