@@ -1,4 +1,6 @@
 #include "lists.h"
+#include <stddef.h> 
+/* Add this line to include the size_t type and NULL macro */
 
 /**
  * listint_len - Returns the number of elements in a linked listint_t list.
