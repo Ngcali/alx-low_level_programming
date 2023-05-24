@@ -1,6 +1,14 @@
 #ifndef LISTS_H
 #define LISTS_H
 
+/**
+ * struct listint_s - Singly linked list
+ * @n: Integer stored in the node
+ * @next: Pointer to the next node
+ *
+ * Description: Basic singly linked list node structure
+ */
+
 /* Definition of struct listint_s */
 typedef struct listint_s
 {
