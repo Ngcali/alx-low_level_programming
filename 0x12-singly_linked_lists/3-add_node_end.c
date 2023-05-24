@@ -26,7 +26,6 @@ list_t *add_node_end(list_t **head, const char *str)
 
 	if (str_copy == NULL)
 		return (NULL);
-
 	/* Create the new node */
 	new_node = malloc(sizeof(list_t));
 
@@ -35,7 +34,6 @@ list_t *add_node_end(list_t **head, const char *str)
 		free(str_copy);
 		return (NULL);
 	}
-
 	/* Assign values to the new node */
 	new_node->str = str_copy;
 	new_node->len = len;
@@ -45,18 +43,14 @@ list_t *add_node_end(list_t **head, const char *str)
 	if (*head == NULL)
 	{
 		*head = new_node;
-
 		return (new_node);
 	}
-
 	/* Traverse the list to find the last node */
 	current = *head;
 
 	while (current->next != NULL)
 		current = current->next;
-
 	/* Append the new node to the end */
 	current->next = new_node;
-
 	return (new_node);
 }
