@@ -16,11 +16,9 @@ list_t *add_node_end(list_t **head, const char *str)
 	list_t *current;
 	char *str_copy;
 	size_t len;
-
 	/* Calculate the length of the string */
 	for (len = 0; str[len] != '\0'; len++)
 		;
-
 	/* Duplicate the string */
 	str_copy = strdup(str);
 
@@ -38,7 +36,6 @@ list_t *add_node_end(list_t **head, const char *str)
 	new_node->str = str_copy;
 	new_node->len = len;
 	new_node->next = NULL;
-
 	/* If the list is empty, make the new node the head */
 	if (*head == NULL)
 	{
