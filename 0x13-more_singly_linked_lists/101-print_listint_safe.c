@@ -10,20 +10,35 @@
  */
 size_t print_listint_safe(const listint_t *head)
 {
-    const listint_t *current = head;
-    size_t count = 0;
+	const listint_t *slow, *fast;
+	size_t count = 0;
 
-    while (current != NULL)
-    {
-        printf("[%p] %d\n", (void *)current, current->n);
-        count++;
-        if (current >= current->next)
-        {
-            printf("-> [%p] %d\n", (void *)current->next, current->next->n);
-            break;
-        }
-        current = current->next;
-    }
+	if (head == NULL)
+		return 0;
 
-    return count;
+	slow = head;
+	fast = head->next;
+
+	while (fast != NULL && fast->next != NULL)
+	{
+		if (slow == fast)
+		{
+			printf("Loop detected [%p] %d\n", (void *)slow, slow->n);
+			break;
+		}
+
+		printf("[%p] %d\n", (void *)slow, slow->n);
+		count++;
+
+		slow = slow->next;
+		fast = fast->next->next;
+	}
+
+	if (fast == NULL || fast->next == NULL)
+	{
+		printf("[%p] %d\n", (void *)slow, slow->n);
+		count++;
+	}
+
+	return count;
 }
