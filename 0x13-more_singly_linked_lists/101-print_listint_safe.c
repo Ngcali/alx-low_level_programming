@@ -14,7 +14,7 @@ size_t print_listint_safe(const listint_t *head)
 	size_t count = 0;
 
 	if (head == NULL)
-		return 0;
+		return (count);
 
 	slow = head;
 	fast = head->next;
@@ -24,6 +24,7 @@ size_t print_listint_safe(const listint_t *head)
 		if (slow == fast)
 		{
 			printf("Loop detected [%p] %d\n", (void *)slow, slow->n);
+			count++;
 			break;
 		}
 
@@ -40,5 +41,5 @@ size_t print_listint_safe(const listint_t *head)
 		count++;
 	}
 
-	return count;
+	return (count);
 }
